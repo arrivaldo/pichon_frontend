@@ -43,7 +43,7 @@ const Add = () => {
         })
 
         try {
-            const response = await axios.post('http://localhost:5000/api/employee/add',
+            const response = await axios.post('https://ims-server-hjfy.onrender.com/api/employee/add',
                 formDataObj, {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem('token')}`

@@ -10,7 +10,7 @@ const View = () => {
         const fetchEmployee = async () => {
           try {
             const response = await axios.get(
-               `http://localhost:5000/api/employee/${id}`, 
+               `https://ims-server-hjfy.onrender.com/api/employee/${id}`, 
             {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
@@ -33,7 +33,7 @@ const View = () => {
     <div className='max-w-3xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
         <h2 className='text-2xl font-bold mb-8 text-center'>Employee Details</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 items-center'>
-            <img src={`http://localhost:5000/${employee.userId.profileImage}`} alt='' 
+            <img src={`https://ims-server-hjfy.onrender.com/${employee.userId.profileImage}`} alt='' 
                 className='rounded-full border w-72'
             />
         <div>

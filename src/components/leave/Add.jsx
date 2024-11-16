@@ -22,7 +22,7 @@ const Add = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-               `http://localhost:5000/api/leave/add`,leave,
+               `https://ims-server-hjfy.onrender.com/api/leave/add`,leave,
             {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
