@@ -6,7 +6,10 @@ const AddDepartment = () => {
 
     const [department, setDepartment] = useState({
         dep_name: '',
-        description: ''
+        description: '',
+        placa: '',
+        economico: '',
+        serie: '',
     })
 
     const navigate = useNavigate()
@@ -23,7 +26,7 @@ const AddDepartment = () => {
 
 
         try {
-                const response = await axios.post('https://ims-server-hjfy.onrender.com/api/department/add', department, {
+                const response = await axios.post('http://localhost:5000/api/department/add', department, {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem('token')}`
                     }
@@ -49,24 +52,51 @@ const AddDepartment = () => {
 
   return (
     <div className='max-w-xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md w-96'>
-        <h2 className='text-2xl font-bold mb-6'>Add Department</h2>
+        <h2 className='text-2xl font-bold mb-6'>Añadir Vehículo</h2>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor='dep_name'
-                className='text-sm font-medium text-gray-700'>Department Name</label>
+                className='text-sm font-medium text-gray-700'>Marca</label>
                 <input type='text' name='dep_name'
                 onChange={handleChange}
-                placeholder='Department Name'
+                placeholder='Volkswagen Vento'
+                className='mt-1 w-full p-2 border border-gray-300 rounded-md'
+                />
+            </div>
+            <div>
+                <label htmlFor='placa'
+                className='text-sm font-medium text-gray-700'>Placa</label>
+                <input type='text' name='placa'
+                onChange={handleChange}
+                placeholder='Placa'
+                className='mt-1 w-full p-2 border border-gray-300 rounded-md'
+                />
+            </div>
+            <div>
+                <label htmlFor='economico'
+                className='text-sm font-medium text-gray-700'>Económico</label>
+                <input type='text' name='economico'
+                onChange={handleChange}
+                placeholder='Económico'
+                className='mt-1 w-full p-2 border border-gray-300 rounded-md'
+                />
+            </div>
+            <div>
+                <label htmlFor='serie'
+                className='text-sm font-medium text-gray-700'>No. Serie</label>
+                <input type='text' name='serie'
+                onChange={handleChange}
+                placeholder='Serie'
                 className='mt-1 w-full p-2 border border-gray-300 rounded-md'
                 />
             </div>
             <div className='mt-3'>
-                <label className='block text-sm font-medium text-gray-700' htmlFor='description'>Description</label>
-                <textarea placeholder='Description' 
+                <label className='block text-sm font-medium text-gray-700' htmlFor='description'>Descripción</label>
+                <textarea placeholder='Descripción' 
                 onChange={handleChange}
                 name='description' className='mt-1 p-2 block w-full border border-gray-300 rounded-md' rows="4"></textarea>
             </div>
-            <button type='submit' className='w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded'>Add Department</button>
+            <button type='submit' className='w-full mt-6 bg-[#0D6194] hover:bg-black text-white font-bold py-2 px-4 rounded'>Generar</button>
         </form>
     </div>
   )

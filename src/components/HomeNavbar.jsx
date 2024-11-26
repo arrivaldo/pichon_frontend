@@ -16,13 +16,13 @@ const HomeNavbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center px-8 py-4 bg-gray-800 text-white">
+    <nav className="flex justify-between items-center px-8 py-4 text-white relative z-30">
       <div 
         onClick={handleLogoClick} 
-        className="text-2xl font-bold cursor-pointer hover:text-gray-300 transition duration-300"
+        className="text-2xl font-bold cursor-pointer hover:text-gray-300 transition duration-300 "
       >
-        Admin System
-      </div>
+        CDS ESTAFETA NLD
+        </div>
       <button 
         onClick={handleLoginClick} 
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"

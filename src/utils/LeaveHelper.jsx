@@ -10,43 +10,43 @@ export const columns = [
         width: "70px"
     },
     {
-        name: "Emp ID",
+        name: "Op. ID",
         selector: (row) => row.employeeId,
-        width: "120px"
+        width: "150px"
     },
     {
-        name: "Name",
+        name: "Nombre",
         selector: (row) => row.name,
         width: "120px"
 
         // sortable: true
     },
     {
-        name: "Leave Type",
+        name: "Tipo",
         selector: (row) => row.leaveType,
-        width: "140px"
+        width: "150px"
 
         // sortable: true
     },
     {
-        name: "Department",
+        name: "Vehículo",
         selector: (row) => row.department,
         sortable: true,
-        width: "170px"
+        width: "130px"
 
     },
     {
-        name: "Days",
-        selector: (row) => row.days,
-        width: "80px"
+        name: "Económico",
+        selector: (row) => row.economico,
+        width: "150px"
     },
     {
-        name: "Status",
+        name: "Estatus",
         selector: (row) => row.status,
         width: "120px"
     },
     {
-        name: "Action",
+        name: "Acción",
         selector: (row) => row.action,
         center: "true",
     },
@@ -63,10 +63,10 @@ export const LeaveButtons = ({ Id }) => {
 
     return (
         <button
-            className="px-4 py-1 bg-teal-500 rounded text-white hover:bg-teal-600"
+            className="px-4 py-1 bg-[#0D6194] rounded text-white hover:bg-teal-600"
             onClick={() => handleView(Id)}
         >
-            View
+            Ver
         </button>
     )
 }

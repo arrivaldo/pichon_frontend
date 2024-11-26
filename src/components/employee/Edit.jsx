@@ -9,7 +9,7 @@ const Edit = () => {
 
     const [employee, setEmployee] = useState({
         name: '',
-        maritalStatus: '',
+        phone: '',
         designation: '',
         salary: '',
         department: ''
@@ -38,7 +38,7 @@ const Edit = () => {
         const fetchEmployee = async () => {
             try {
               const response = await axios.get(
-                 `https://ims-server-hjfy.onrender.com/api/employee/${id}`, 
+                 `http://localhost:5000/api/employee/${id}`, 
               {
                 headers: {
                   "Authorization" : `Bearer ${localStorage.getItem('token')}`
@@ -49,7 +49,7 @@ const Edit = () => {
                       setEmployee((prev) => ({
                         ...prev,
                          name: employee.userId.name,
-                          maritalStatus: employee.maritalStatus,
+                         phone: employee.phone,
                            designation: employee.designation,
                             salary: employee.salary,
                              department: employee.department 
@@ -77,7 +77,7 @@ const Edit = () => {
 
 
         try {
-            const response = await axios.put(`https://ims-server-hjfy.onrender.com/api/employee/${id}`,
+            const response = await axios.put(`http://localhost:5000/api/employee/${id}`,
                 employee, {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem('token')}`
@@ -119,6 +119,21 @@ const Edit = () => {
                 </div>
 
 
+                <div>
+                    <label className='block text-sm font-medium text-gray-700'>
+                        Phone
+                    </label>
+                    <input
+                            type='text'
+                            name='phone'
+                            value={employee.phone}
+                            onChange={handleChange}
+                            placeholder='Teléfono'
+                            className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
+                    />
+                </div>
+
+
             
 
                 {/* Gender */}
@@ -140,7 +155,7 @@ const Edit = () => {
 
                 {/* Marital Status */}
 
-                <div>
+                {/* <div>
                         <label className='block text-sm font-medium text-gray-700'>Marital Status</label>
                         <select name='maritalStatus'
                         className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
@@ -153,7 +168,7 @@ const Edit = () => {
                             <option value="married">Married</option>
                             <option value="other">Other</option>
                         </select>
-                    </div>
+                    </div> */}
 
 
                 {/* Designation */}
@@ -211,7 +226,7 @@ const Edit = () => {
             </div>
             <button
                     type='submit'
-                    className='w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-md'
+                    className='w-full mt-6 bg-[#0D6194] hover:bg-black text-white font-bold py-2 px-4 rounded-md'
                 >
                         Edit Employee
                 </button>

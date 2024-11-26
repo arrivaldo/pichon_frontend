@@ -14,7 +14,7 @@ const View = () => {
 
     const fetchSalaries = async () => {
         try {
-            const response = await axios.get(`https://ims-server-hjfy.onrender.com/api/salary/${id}/${user.role}`, {
+            const response = await axios.get(`http://localhost:5000/api/salary/${id}/${user.role}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -35,13 +35,13 @@ const View = () => {
         fetchSalaries();
     }, []);
 
-
     const filterSalaries = (q) => {
-        const filteredRecords = salaries.filter((leave) => 
-            leave.employeeId.employeeId.toLocaleLowerCase().includes(q.toLocaleLowerCase())
+        const filteredRecords = salaries.filter((salary) =>
+            salary.comment?.toLowerCase().includes(q.toLowerCase()) // Use optional chaining to avoid errors
         );
         setFilteredSalaries(filteredRecords);
     };
+    
     
 
   return (
@@ -51,12 +51,12 @@ const View = () => {
     ): (
         <div className='overflow-x-auto p-5'>
             <div className='text-center'>
-                <h2 className='text-2xl font-bold'>Salary History</h2>
+                <h2 className='text-2xl font-bold'>Historial de Respuestas</h2>
             </div>
-            <div className='flex justify-end my-3'>
+            <div className='flex justify-start md:justify-end my-3'>
                 <input
                     type='text'
-                    placeholder='Search By Emp ID'
+                    placeholder='Buscar por Comentario'
                     className='border px-2 rounded-md py-0.5 border-gray-300'
                     onChange={(e) => filterSalaries(e.target.value)}  // Passes the input value to filterSalaries
                     />
@@ -68,12 +68,12 @@ const View = () => {
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 border border-gray-200">
                     <tr>
                         <th className='px-6 py-3'>SNO</th>
-                        <th className='px-6 py-3'>Emp ID</th>
-                        <th className='px-6 py-3'>Salary</th>
-                        <th className='px-6 py-3'>Allowance</th>
-                        <th className='px-6 py-3'>Deduction</th>
-                        <th className='px-6 py-3'>Total</th>
-                        <th className='px-6 py-3'>Pay Date</th>
+                        <th className='px-6 py-3'>Op ID</th>
+                        {/* <th className='px-6 py-3'>Salary</th>
+                        <th className='px-6 py-3'>Allowance</th> */}
+                        <th className='px-6 py-3'>Comentario</th>
+                        {/* <th className='px-6 py-3'>Total</th> */}
+                        <th className='px-6 py-3'>Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,10 +84,11 @@ const View = () => {
         >
             <td className='px-6 py-3'>{sno++}</td>
             <td className='px-6 py-3'>{salary.employeeId.employeeId}</td>
-            <td className='px-6 py-3'>{salary.basicSalary}</td>
-            <td className='px-6 py-3'>{salary.allowances}</td>
-            <td className='px-6 py-3'>{salary.deductions}</td>
-            <td className='px-6 py-3'>{salary.netSalary}</td>
+            
+            {/* <td className='px-6 py-3'>{salary.basicSalary}</td>
+            <td className='px-6 py-3'>{salary.allowances}</td> */}
+            <td className='px-6 py-3'>{salary.comment}</td>
+            {/* <td className='px-6 py-3'>{salary.netSalary}</td> */}
             <td className='px-6 py-3'>
                 {new Date(salary.payDate).toLocaleDateString()}
             </td>

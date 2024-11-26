@@ -15,7 +15,7 @@ function DepartmentList() {
   const fetchDepartments = async () => {
     setDepLoading(true)
     try {
-      const response = await axios.get("https://ims-server-hjfy.onrender.com/api/department", {
+      const response = await axios.get("http://localhost:5000/api/department", {
         headers: {
           "Authorization" : `Bearer ${localStorage.getItem('token')}`
         }
@@ -27,6 +27,10 @@ function DepartmentList() {
             _id: dep._id,
             sno: sno++,
             dep_name: dep.dep_name,
+            economico: dep.economico,
+            placa: dep.placa,
+            serie: dep.serie,
+            description: dep.description,
             action: (<DepartmentButtons DepId={dep._id} onDepartmentDelete={onDepartmentDelete} />)
           }
         ))
@@ -61,13 +65,13 @@ setFilteredDepartments(records)
     <>{depLoading ? <div>Loading...</div> :
     <div className='p-5'>
       <div className='text-center'>
-        <h3 className='text=2xl font-bold'>Manage Departments</h3>
+        <h3 className='text=2xl font-bold'>Manejo de Vehículos</h3>
       </div>
-      <div className='flex justify-between items-center'>
-          <input type='text' placeholder='Search By Dep Name'
+      <div style={{marginTop: '3%'}}  className="flex flex-col gap-2 md:items-center md:flex-row md:justify-between ">
+          <input type='text' placeholder='Buscar por Marca'
           onChange={filterDepartments}
-          className='px-4 py-0.5 border' />
-          <Link to="/admin-dashboard/add-department" className='px-4 py-1 bg-teal-600 rounded text-white'>Add New Department</Link>
+          className='px-4 py-0.5 border text-center' />
+          <Link to="/admin-dashboard/add-department" className='px-4 py-1 text-center bg-[#0D6194] rounded text-white'>Añadir Vehículo</Link>
       </div>
       <div className='mt-5'>
           <DataTable 

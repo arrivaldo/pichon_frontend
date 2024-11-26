@@ -7,12 +7,32 @@ export const columns = [
         selector: (row) => row.sno
     },
     {
-        name: "Department Name",
+        name: "Marca",
         selector: (row) => row.dep_name,
         sortable: true
     },
     {
-        name: "Action",
+        name: "Placa",
+        selector: (row) => row.placa,
+        sortable: true
+    },
+    // {
+    //     name: "No. Serie",
+    //     selector: (row) => row.serie,
+    //     sortable: true
+    // },
+    {
+        name: "Económico",
+        selector: (row) => row.economico,
+        sortable: true
+    },
+    {
+        name: "Descripción",
+        selector: (row) => row.description,
+        sortable: true
+    },
+    {
+        name: "Gestión",
         selector: (row) => row.action
     },
 ]
@@ -24,7 +44,7 @@ export const DepartmentButtons = ({DepId, onDepartmentDelete}) => {
         const confirm = window.confirm("Do you want to delete?")
         if(confirm) {
             try {
-                const response = await axios.delete(`https://ims-server-hjfy.onrender.com/api/department/${id}`, {
+                const response = await axios.delete(`http://localhost:5000/api/department/${id}`, {
                     headers: {
                         "Authorization" : `Bearer ${localStorage.getItem('token')}`
                     }
@@ -43,12 +63,12 @@ export const DepartmentButtons = ({DepId, onDepartmentDelete}) => {
 
     return (
         <div className="flex space-x-3">
-            <button className="px-3 py-1 bg-teal-600 text-white"
+            <button className="px-3 py-1 bg-[#0D6194] text-white"
             onClick={() => navigate(`/admin-dashboard/department/${DepId}`)}
-            >Edit</button>
+            >Editar</button>
             <button className="px-3 py-1 bg-red-600 text-white"
             onClick={() => handleDelete(DepId)}
-            >Delete</button>
+            >Borrar</button>
         </div>
     )
 }

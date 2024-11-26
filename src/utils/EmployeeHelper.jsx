@@ -7,38 +7,51 @@ export const columns = [
     {
         name: "S No",
         selector: (row) => row.sno,
-        width: "70px"
+        width: "80px"
     },
     {
-        name: "Name",
+        name: "Nombre",
         selector: (row) => row.name,
         sortable: true,
-        width: "100px"
+        width: "110px"
 
     },
     {
-        name: "Image",
+        name: "Imagen",
         selector: (row) => row.profileImage,
-        width: "90px"
-
-        // sortable: true
-    },
-    {
-        name: "Department",
-        selector: (row) => row.dep_name,
         width: "120px"
 
         // sortable: true
     },
     {
-        name: "DOB",
+        name: "Vehículo",
+        selector: (row) => row.dep_name,
+        width: "150px"
+
+        // sortable: true
+    },
+    {
+      name: "Económico",
+      selector: (row) => row.economico, // Display economico here
+      sortable: true,
+      width: "190px",
+  },
+    {
+        name: "Fecha de Nacimiento",
         selector: (row) => row.dob,
         sortable: true,
-        width: "130px"
+        width: "180px"
 
     },
     {
-        name: "Action",
+      name: "Teléfono",
+      selector: (row) => row.phone,
+      sortable: true,
+      width: "130px"
+
+  },
+    {
+        name: "Gestión",
         selector: (row) => row.action,
         center: "true"
     },
@@ -51,7 +64,7 @@ export const fetchDepartments = async () => {
     let departments
 
     try {
-      const response = await axios.get("https://ims-server-hjfy.onrender.com/api/department", {
+      const response = await axios.get("http://localhost:5000/api/department", {
         headers: {
           "Authorization" : `Bearer ${localStorage.getItem('token')}`
         }
@@ -76,7 +89,7 @@ export const fetchDepartments = async () => {
     let employees;
 
     try {
-      const response = await axios.get(`https://ims-server-hjfy.onrender.com/api/employee/department/${id}`, {
+      const response = await axios.get(`http://localhost:5000/api/employee/department/${id}`, {
         headers: {
           "Authorization" : `Bearer ${localStorage.getItem('token')}`
         }
@@ -105,16 +118,17 @@ export const fetchDepartments = async () => {
         <div className="flex space-x-3">
             <button className="px-3 py-1 bg-teal-600 text-white"
             onClick={() => navigate(`/admin-dashboard/employees/${Id}`)}
-            >View</button>
-            <button className="px-3 py-1 bg-blue-600 text-white"
+            >Ver</button>
+            <button className="px-3 py-1 bg-[#0D6194] text-white"
             onClick={() => navigate(`/admin-dashboard/employees/edit/${Id}`)}
-            >Edit</button>
-             <button className="px-3 py-1 bg-yellow-600 text-white"
-              onClick={() => navigate(`/admin-dashboard/employees/salary/${Id}`)}
-           >Salary</button>
+            >Editar</button>
              <button className="px-3 py-1 bg-red-600 text-white"
               onClick={() => navigate(`/admin-dashboard/employees/leaves/${Id}`)}
-            >Leave</button>
+            >Registros</button>
+             <button className="px-3 py-1 bg-yellow-600 text-white"
+              onClick={() => navigate(`/admin-dashboard/employees/salary/${Id}`)}
+           >Commentarios</button>
+            
         </div>
     )
 }

@@ -14,7 +14,7 @@ const EditDepartment = () => {
           setDepLoading(true)
           try {
             const response = await axios.get(
-               `https://ims-server-hjfy.onrender.com/api/department/${id}`, 
+               `http://localhost:5000/api/department/${id}`, 
             {
               headers: {
                 "Authorization" : `Bearer ${localStorage.getItem('token')}`
@@ -45,7 +45,7 @@ const EditDepartment = () => {
 
 
         try {
-                const response = await axios.put(`https://ims-server-hjfy.onrender.com/api/department/${id}`,
+                const response = await axios.put(`http://localhost:5000/api/department/${id}`,
                     department, 
                     {
                     headers: {
@@ -70,15 +70,35 @@ const EditDepartment = () => {
   return (
     <>{depLoading ? <div>Loading...</div> :
             <div className='max-w-xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md w-96'>
-        <h2 className='text-2xl font-bold mb-6'>Edit Department</h2>
+        <h2 className='text-2xl font-bold mb-6'>Editar Vehículo</h2>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor='dep_name'
-                className='text-sm font-medium text-gray-700'>Department Name</label>
+                className='text-sm font-medium text-gray-700'>Vehículo</label>
                 <input type='text' name='dep_name'
                 onChange={handleChange}
                 placeholder='Department Name'
                 value={department.dep_name}
+                className='mt-1 w-full p-2 border border-gray-300 rounded-md'
+                />
+            </div>
+            <div>
+                <label htmlFor='placa'
+                className='text-sm font-medium text-gray-700'>Placa</label>
+                <input type='text' name='placa'
+                onChange={handleChange}
+                placeholder='Placa'
+                value={department.placa}
+                className='mt-1 w-full p-2 border border-gray-300 rounded-md'
+                />
+            </div>
+            <div>
+                <label htmlFor='economico'
+                className='text-sm font-medium text-gray-700'>Economico</label>
+                <input type='text' name='economico'
+                onChange={handleChange}
+                placeholder='Economico'
+                value={department.economico}
                 className='mt-1 w-full p-2 border border-gray-300 rounded-md'
                 />
             </div>
@@ -89,7 +109,7 @@ const EditDepartment = () => {
                 value={department.description}
                 name='description' className='mt-1 p-2 block w-full border border-gray-300 rounded-md' rows="4"></textarea>
             </div>
-            <button type='submit' className='w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded'>Add Department</button>
+            <button type='submit' className='w-full mt-6 bg-[#0D6194] hover:bg-black text-white font-bold py-2 px-4 rounded'>Add Department</button>
         </form>
     </div>
     }</>

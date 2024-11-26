@@ -28,7 +28,7 @@ const Setting = () => {
         } else {
             try {
                 const response = await axios.put(
-                    "https://ims-server-hjfy.onrender.com/api/setting/change-password",
+                    "http://localhost:5000/api/setting/change-password",
                     setting,
                     {
                         headers: {
@@ -55,13 +55,13 @@ const Setting = () => {
 
 
   return (
-    <div className='max-w-2xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md w-96'>
-        <h2 className='text-2xl font-bold mb-6'>Change Password</h2>
+    <div className='max-w-2xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
+        <h2 className='text-2xl font-bold mb-6'>Cambiar Contraseña</h2>
         <p className='text-red-500'>{error}</p>
         <form onSubmit={handleSubmit}>
             <div>
                 <label className='text-sm font-medium text-gray-700'>
-                    Old Password
+                    Antigüa Contraseña
                 </label>
                 <input 
                     type='password'
@@ -76,7 +76,7 @@ const Setting = () => {
 
             <div>
                 <label className='text-sm font-medium text-gray-700'>
-                    New Password
+                    Nueva Contraseña
                 </label>
                 <input 
                     type='password'
@@ -91,7 +91,7 @@ const Setting = () => {
 
             <div>
                 <label className='text-sm font-medium text-gray-700'>
-                    Confirm Password
+                    Confirmar Contraseña
                 </label>
                 <input 
                     type='password'
@@ -105,9 +105,9 @@ const Setting = () => {
 
             <button
                 type='submit'
-                className='w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded'
+                className='w-full mt-6 bg-[#0D6194] hover:bg-black text-white font-bold py-2 px-4 rounded'
             >
-                Change Password
+                Ejecutar Cambio
             </button>
 
         </form>

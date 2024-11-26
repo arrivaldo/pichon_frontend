@@ -13,7 +13,7 @@ const List = () => {
     const fetchEmployees = async () => {
       setEmpLoading(true);
       try {
-        const response = await axios.get('https://ims-server-hjfy.onrender.com/api/employee', {
+        const response = await axios.get('http://localhost:5000/api/employee', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -24,7 +24,9 @@ const List = () => {
             _id: emp._id,
             sno: sno++,
             dep_name: emp.department.dep_name,
+            economico: emp.department.economico, // Add economico here
             name: emp.userId.name,
+            phone: emp.phone,
             dob: new Date(emp.dob).toLocaleDateString(),
             profileImage: (
               <img
@@ -61,20 +63,20 @@ const List = () => {
   return (
     <div className="p-6">
       <div className="text-center">
-        <h3 className="text=2xl font-bold">Manage Employee</h3>
+        <h3 className="text=2xl font-bold">Gestión de Operadores</h3>
       </div>
-      <div className="flex justify-between items-center">
+      <div style={{marginTop: '3%'}} className="flex flex-col gap-2 md:items-center md:flex-row md:justify-between ">
         <input
           type="text"
-          placeholder="Search By Emp Name"
+          placeholder="Buscar por nombre"
           onChange={handleFilter}
-          className="px-4 py-0.5 border"
+          className="px-4 py-0.5 border text-center"
         />
         <Link
           to="/admin-dashboard/add-employee"
-          className="px-4 py-1 bg-teal-600 rounded text-white"
+          className="px-4 py-1 bg-[#0D6194] rounded text-white text-center"
         >
-          Add New Employee
+          Agregar Operador
         </Link>
       </div>
       <div className="mt-6">
