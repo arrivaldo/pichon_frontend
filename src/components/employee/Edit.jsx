@@ -38,7 +38,7 @@ const Edit = () => {
         const fetchEmployee = async () => {
             try {
               const response = await axios.get(
-                 `http://localhost:5000/api/employee/${id}`, 
+                 `https://pichon-server.onrender.com/api/employee/${id}`, 
               {
                 headers: {
                   "Authorization" : `Bearer ${localStorage.getItem('token')}`
@@ -77,7 +77,7 @@ const Edit = () => {
 
 
         try {
-            const response = await axios.put(`http://localhost:5000/api/employee/${id}`,
+            const response = await axios.put(`https://pichon-server.onrender.com/api/employee/${id}`,
                 employee, {
                 headers: {
                     "Authorization" : `Bearer ${localStorage.getItem('token')}`

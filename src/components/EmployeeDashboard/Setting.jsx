@@ -28,7 +28,7 @@ const Setting = () => {
         } else {
             try {
                 const response = await axios.put(
-                    "http://localhost:5000/api/setting/change-password",
+                    "https://pichon-server.onrender.com/api/setting/change-password",
                     setting,
                     {
                         headers: {

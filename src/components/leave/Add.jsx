@@ -32,7 +32,7 @@ const Add = () => {
       images.forEach((file) => formData.append("images", file));
 
       const uploadResponse = await axios.post(
-        "http://localhost:5000/api/leave/upload-images",
+        "https://pichon-server.onrender.com/api/leave/upload-images",
         formData,
         {
           headers: {
@@ -47,7 +47,7 @@ const Add = () => {
 
       // Add leave data along with image URLs
       const leaveResponse = await axios.post(
-        "http://localhost:5000/api/leave/add",
+        "https://pichon-server.onrender.com/api/leave/add",
         { ...leave, images: uploadedUrls },
         {
           headers: {

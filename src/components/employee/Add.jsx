@@ -29,7 +29,7 @@ const Add = () => {
             console.log("Form Data:", formData[key]); // Check if password is present
         })
         try {
-            const response = await axios.post('http://localhost:5000/api/employee/add', formDataObj, {
+            const response = await axios.post('https://pichon-server.onrender.com/api/employee/add', formDataObj, {
               headers: {
                 "Authorization": `Bearer ${localStorage.getItem('token')}`,
                 "Content-Type": "multipart/form-data",
