@@ -249,7 +249,7 @@ const Landing = () => {
               <h1 className="font-bold text-2xl italic">RODRI LABS</h1>
               {/* BIOGRAPHY DESC */}
               <p className="text-lg">
-                Esta aplicación fue desarrollada por Rodri Labs, LA agencia
+                Esta aplicación fue desarrollada por Rodri Labs, la agencia
                 especializada en soluciones tecnológicas personalizadas y
                 enfocada en ofrecer productos innovadores, robustos y escalables
                 que responden a las necesidades específicas de nuestros
