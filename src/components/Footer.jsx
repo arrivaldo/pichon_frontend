@@ -47,7 +47,7 @@ export const Footer = () => {
           title="Legal"
           links={[
             {
-              title: "Términos y Conditiones",
+              title: "Términos y Condiciones",
               href: "/#",
             },
             {
