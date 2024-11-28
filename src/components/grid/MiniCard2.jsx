@@ -17,10 +17,10 @@ export const MiniCard2 = () => {
         <div className="absolute -bottom-2 left-2 right-2 z-10 h-44 rounded-xl border border-zinc-700 bg-zinc-800/50 p-4">
           <div className="mb-3 flex gap-3">
             <img
-              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Don"
-              alt="Placeholder image for faux user Don Donaldson"
-              className="size-10 shrink-0 rounded-full"
-            />
+              src="/user.png"
+              alt="Rafael Ruíz profile pic"
+              className="w-10 h-10 object-cover rounded-full"
+              />
             <div>
               <p className="text-sm font-semibold text-zinc-50">
                 Rafael Ruíz
