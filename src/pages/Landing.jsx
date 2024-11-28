@@ -59,7 +59,7 @@ const Landing = () => {
           Historial de Incidentes
           </h2> */}
         <p className="text-md px-2 md:text-lg">
-          Accede a datos históricos de cada incidente, lo que facilita un mejor
+          Accede a datos históricos de cada incidencia, lo que facilita un mejor
           análisis y prevención.
         </p>
      
@@ -223,8 +223,8 @@ const Landing = () => {
 
         <div className="flex flex-col items-center justify-center relative z-30 bg-blue-600 py-6 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Historial de Incidentes</h2>
-          <p className="text-lg">
-            Accede a datos históricos de cada incidente, lo que facilita un
+          <p className="text-lg px-2">
+            Accede a datos históricos de cada incidencia, lo que facilita un
             mejor análisis y prevención.
           </p>
           <button
