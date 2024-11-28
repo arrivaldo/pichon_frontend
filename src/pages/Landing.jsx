@@ -17,6 +17,7 @@ import { FoldingLogos } from "../components/FoldingLogos";
 // import { GradientGrid } from "../components/utils/GradientGrid";
 
 const Landing = () => {
+  
   const navigate = useNavigate();
 
   // Function to navigate to the login page
@@ -50,7 +51,7 @@ const Landing = () => {
    
 
       <div style={{ height: "100%" }} className="absolute w-full z-20 ">
-        <div style={{}} className="absolute h-[110%] md:h-[80%] inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#002d934a,#000000a1)]"></div>
+        <div style={{}} className="absolute h-[110%] md:h-[91%] inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#002d934a,#000000a1)]"></div>
       </div>
 
       <div className="flex flex-col items-center justify-center relative z-30 bg-blue-600 py-2 text-center text-white">
