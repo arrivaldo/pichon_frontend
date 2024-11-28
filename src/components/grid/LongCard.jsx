@@ -18,11 +18,10 @@ export const LongCard = () => {
     <div className="col-span-2 h-fit sm:h-[209px]">
       <Card>
         <div className="relative z-20">
-          <CalloutChip>Callout #4</CalloutChip>
-          <p className="mb-1.5 text-2xl">Talk about integrations</p>
+        <CalloutChip>Característica #4</CalloutChip>
+          <p className="mb-1.5 text-2xl">Integración con Herramientas Existentes          </p>
           <p className="max-w-sm text-zinc-400">
-            If you connect with tools that people already know and use, show it
-            off!
+          Conecta nuestra aplicación con las herramientas y sistemas que ya utilizas, como software de gestión, CRM y plataformas de comunicación.
           </p>
         </div>
         <div className="absolute bottom-0 right-0 top-0 z-10 w-48 bg-gradient-to-r from-zinc-950/0 to-zinc-950" />

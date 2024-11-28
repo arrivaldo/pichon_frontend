@@ -16,7 +16,7 @@ const HomeNavbar2 = () => {
   };
 
   return (
-    <nav className="flex bg-[#0D6194] justify-between items-center px-8 py-4 text-white relative z-30">
+    <nav className="flex absolute top-0 justify-between items-center px-8 py-4 text-white z-30">
       <div 
         onClick={handleLogoClick} 
         className="text-2xl font-bold cursor-pointer hover:text-gray-300 transition duration-300"

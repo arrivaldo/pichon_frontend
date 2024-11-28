@@ -11,3 +11,7 @@
     display: none; /* For Chrome, Safari, and other WebKit-based browsers */
   }
   
+
+  body {
+    background: #06080d;
+  }

@@ -101,19 +101,19 @@ const Edit = () => {
   return (
     <>{departments && employee ? (
     <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-        <h2 className='text-2xl font-bold mb-6'>Edit Employee</h2>
+        <h2 className='text-2xl font-bold mb-6'>Editar Operador</h2>
         <form onSubmit={handleSubmit}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>
                     <label className='block text-sm font-medium text-gray-700'>
-                        Name
+                        Nombre
                     </label>
                     <input
                             type='text'
                             name='name'
                             value={employee.name}
                             onChange={handleChange}
-                            placeholder='Insert Name'
+                            placeholder='Insertar Nombre'
                             className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
                     />
                 </div>
@@ -121,7 +121,7 @@ const Edit = () => {
 
                 <div>
                     <label className='block text-sm font-medium text-gray-700'>
-                        Phone
+                        Teléfono
                     </label>
                     <input
                             type='text'
@@ -175,11 +175,11 @@ const Edit = () => {
 
 
                 <div>
-                    <label className='block text-sm font-medium text-gray-700'>Designation</label>
+                    <label className='block text-sm font-medium text-gray-700'>Designación</label>
                     <input type='text' name='designation'
                     onChange={handleChange}
                     value={employee.designation}
-                    placeholder='Designation'
+                    placeholder='Designación'
                     className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
                     required
                     />
@@ -192,9 +192,9 @@ const Edit = () => {
 
 
                 <div>
-                    <label className='block text-sm font-medium text-gray-700'>Salary</label>
+                    <label className='block text-sm font-medium text-gray-700'>Kilometraje</label>
                     <input type='number' name='salary'
-                    onChange={handleChange}                                        placeholder='Salary'
+                    onChange={handleChange}                                        placeholder='10,000 km'
                     className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
                     value={employee.salary}
                     required
@@ -206,14 +206,14 @@ const Edit = () => {
                 {/* Department */}
 
                 <div className='col-span-2'>
-                    <label className='block text-sm font-medium text-gray-700'>Department</label>
+                    <label className='block text-sm font-medium text-gray-700'>Vehículo</label>
                     <select name='department'
                     onChange={handleChange}
                     value={employee.department}
                     className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
                     required
                     >
-                        <option value="">Select Department</option>
+                        <option value="">Seleccionar Vehículo</option>
                         {departments.map((dep) => (
                             <option key={dep._id} value={dep._id}>{dep.dep_name}</option>
                         ))}

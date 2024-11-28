@@ -60,6 +60,8 @@ const Add = () => {
                             onChange={handleChange}
                             placeholder='Insert Name'
                             className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
+                            required
+
                     />
                 </div>
                 {/*Email */}
@@ -140,11 +142,10 @@ const Add = () => {
                 </div>
                      {/* Salary */}
                 <div>
-                    <label className='block text-sm font-medium text-gray-700'>Salary</label>
-                    <input type='number' name='salary'
-                    onChange={handleChange}                                        placeholder='Salary'
+                    <label className='block text-sm font-medium text-gray-700'>Kilometraje</label>
+                    <input type='text' name='salary'
+                    onChange={handleChange}                                        placeholder='10,000 km'
                     className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
-                    required
                     />
                 </div>
    {/* Password */}
@@ -177,7 +178,6 @@ const Add = () => {
                     placeholder='Upload Image'
                     accept='image/*'
                     className='mt-1 p-2 block w-full border border-gray-300 rounded-md'
-                    required
                     />
                 </div>
               

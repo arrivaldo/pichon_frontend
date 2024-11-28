@@ -8,11 +8,10 @@ export const MiniCard2 = () => {
   return (
     <div className="col-span-2 h-[415px] sm:h-[375px] md:col-span-1">
       <Card>
-        <CalloutChip>Callout #3</CalloutChip>
-        <p className="mb-1.5 text-2xl">Let customers talk for you</p>
+      <CalloutChip>Característica #3</CalloutChip>
+      <p className="mb-1.5 text-2xl">Múltiples usuarios</p>
         <p className="text-zinc-400">
-          Someone else saying that they love you is a lot more powerful than
-          saying you love yourself.
+          La aplicación administra múltiples usuarios y los cataloga según su rol.
         </p>
 
         <div className="absolute -bottom-2 left-2 right-2 z-10 h-44 rounded-xl border border-zinc-700 bg-zinc-800/50 p-4">
@@ -24,15 +23,14 @@ export const MiniCard2 = () => {
             />
             <div>
               <p className="text-sm font-semibold text-zinc-50">
-                Don Donaldson
+                Rafael Ruíz
               </p>
-              <p className="text-xs text-zinc-400">@donnydiesel</p>
+              <p className="text-xs text-zinc-400">@rafaruiz</p>
             </div>
           </div>
           <p>
-            <span className="font-semibold text-blue-300">@your_company</span>
-            &apos;s automation tools are the best in the industry! Not sure how
-            we ever lived without them ❤️
+            <span className="font-semibold text-blue-300">@CDSESTAFETANLD </span>
+            Antes teníamos problemas para rastrear incidencias, pero ahora todo está al alcance de un clic. ¡Muy recomendado!
           </p>
 
           <SiX className="absolute right-4 top-4 text-[#1F9AF1]" />

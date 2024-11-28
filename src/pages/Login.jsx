@@ -51,7 +51,7 @@ const handleLogoClick = () => {
 
   return (
     <>
-    {/* <HomeNavbar2 /> */}
+    <HomeNavbar2 />
     <div className="relative h-screen w-full bg-slate-950">
   {/* Radial Gradient Background */}
   <div className="absolute top-0 left-0 right-0 bottom-1/2 bg-[radial-gradient(circle_500px_at_50%_200px,#002d934a,#00000024)]"></div>

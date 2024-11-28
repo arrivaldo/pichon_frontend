@@ -20,11 +20,12 @@ export const Tower = () => {
       <Card>
         <PulseLine />
 
-        <CalloutChip>Callout #1</CalloutChip>
-        <p className="mb-2 text-2xl">Show your product</p>
+        <CalloutChip>Característica #1</CalloutChip>
+        <p className="mb-2 text-2xl">Panel de Control</p>
         <p className="mb-8 text-zinc-400">
-          These cards are a great place to give a high level break down of what
-          your website is about. Try to talk about benefits instead of features.
+        Accede al historial de cada incidencia, gracias a una interfaz cómoda y accesible que permite el monitorio efectivo de registros e incidencias.
+
+
         </p>
 
         <CornerBlur />
@@ -53,23 +54,27 @@ const MockupSideBar = () => (
     <div className="space-y-2">
       <div className="flex items-center gap-1 rounded bg-zinc-700 px-1 py-0.5 text-xs text-zinc-200">
         <FiUser />
-        Users
+        Op.
       </div>
       <div className="flex items-center gap-1 rounded px-1 py-0.5 text-xs text-zinc-600">
         <FiMail />
-        Campaigns
+        Panel
       </div>
       <div className="flex items-center gap-1 rounded px-1 py-0.5 text-xs text-zinc-600">
         <FiAward />
-        Goals
+        Vehículos
       </div>
       <div className="flex items-center gap-1 rounded px-1 py-0.5 text-xs text-zinc-600">
         <FiGrid />
-        Tools
+        Registros
+      </div>
+      <div className="flex items-center gap-1 rounded px-1 py-0.5 text-xs text-zinc-600">
+        <FiGrid />
+        Coments
       </div>
       <div className="flex items-center gap-1 rounded px-1 py-0.5 text-xs text-zinc-600">
         <FiSettings />
-        Settings
+        Config
       </div>
     </div>
   </div>
@@ -144,7 +149,7 @@ const MockupMain = () => {
     <div className="relative w-full">
       <div className="relative z-0 w-full p-4">
         <div className="w-full border-b border-zinc-700 pb-2 text-xs font-semibold uppercase text-zinc-500">
-          <span>User</span>
+          <span>Operador</span>
         </div>
         {users.map((u, i) => (
           <motion.div

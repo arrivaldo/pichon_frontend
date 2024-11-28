@@ -11,19 +11,18 @@ import { SectionHeadingSpacing } from "../utils/SectionHeadingSpacing";
 
 export const Content = () => {
   return (
-    <section className="bg-[#0f1522] text-white">
+    <section className="bg-[#06080D] text-white">
       <MaxWidthWrapper className="relative z-20 pb-20 pt-20 md:pb-28 md:pt-40">
         <SectionHeadingSpacing>
           <SectionHeading>
-            Show the people
+            Explora Nuestras
             <br />
             <span className="bg-gradient-to-br from-blue-400 to-blue-700 bg-clip-text text-transparent">
-              what makes you great
+              Funcionalidades Clave
             </span>
           </SectionHeading>
           <SectionSubheading>
-            Here's a good way to show some high levels pros as to what your
-            product does and for who.
+          Un enfoque completo para administrar, gestionar y resolver incidencias automovilísticas con facilidad.
           </SectionSubheading>
         </SectionHeadingSpacing>
 

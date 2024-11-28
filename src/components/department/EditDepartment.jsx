@@ -94,7 +94,7 @@ const EditDepartment = () => {
             </div>
             <div>
                 <label htmlFor='economico'
-                className='text-sm font-medium text-gray-700'>Economico</label>
+                className='text-sm font-medium text-gray-700'>Económico</label>
                 <input type='text' name='economico'
                 onChange={handleChange}
                 placeholder='Economico'
@@ -103,13 +103,13 @@ const EditDepartment = () => {
                 />
             </div>
             <div className='mt-3'>
-                <label className='block text-sm font-medium text-gray-700' htmlFor='description'>Description</label>
+                <label className='block text-sm font-medium text-gray-700' htmlFor='description'>Descripción</label>
                 <textarea placeholder='Description' 
                 onChange={handleChange}
                 value={department.description}
                 name='description' className='mt-1 p-2 block w-full border border-gray-300 rounded-md' rows="4"></textarea>
             </div>
-            <button type='submit' className='w-full mt-6 bg-[#0D6194] hover:bg-black text-white font-bold py-2 px-4 rounded'>Add Department</button>
+            <button type='submit' className='w-full mt-6 bg-[#0D6194] hover:bg-black text-white font-bold py-2 px-4 rounded'>Editar Vehículo</button>
         </form>
     </div>
     }</>

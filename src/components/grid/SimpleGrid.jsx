@@ -1,44 +1,43 @@
 import React from "react";
-import {
-  FiCalendar,
-  FiCheck,
-  FiCloud,
-  FiDollarSign,
-  FiMoon,
-  FiWatch,
-} from "react-icons/fi";
+import { MdSecurity, MdImage } from 'react-icons/md';
+import { AiOutlineDatabase } from 'react-icons/ai';
+import { RiCloudLine } from 'react-icons/ri';
+import { FaReact } from 'react-icons/fa';
+import { IoNotificationsOutline } from 'react-icons/io5';
+
+
 
 export const SimpleGrid = () => (
   <div className="relative z-10 grid grid-cols-2 gap-9 px-3 md:grid-cols-3 md:gap-12 md:px-6">
     <Item
-      Icon={FiCalendar}
-      title="Clear your calendar"
-      subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, dolorem."
+      Icon={MdSecurity}
+      title="Acceso basado en Rol"
+      subtitle="La aplicación garantiza que cada usuario tenga acceso a las funcionalidades y datos correspondientes a su rol."
     />
     <Item
-      Icon={FiWatch}
-      title="Save tens of hours"
-      subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, dolorem."
+      Icon={AiOutlineDatabase}
+      title="Operaciones CRUD"
+      subtitle="Realiza operaciones de Crear, Leer, Actualizar y Eliminar con facilidad. Administra tus datos de forma eficiente."
     />
     <Item
-      Icon={FiMoon}
-      title="Rest easy"
-      subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, dolorem."
+      Icon={RiCloudLine}
+      title="Cloudinary API"
+      subtitle="Integramos Cloudinary para una gestión avanzada de imágenes. Carga, almacena y manipula archivos multimedia con velocidad y calidad."
     />
     <Item
-      Icon={FiDollarSign}
-      title="Save thousands"
-      subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, dolorem."
+      Icon={FaReact}
+      title="Desarrollado con MERN"
+      subtitle="Construido con MERN (MongoDB, Express.js, React.js y Node.js), nuestra aplicación es robusta y escalable."
     />
     <Item
-      Icon={FiCloud}
-      title="Simple hosting"
-      subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, dolorem."
+      Icon={MdImage}
+      title="Imágenes Optimizadas"
+      subtitle="Entregamos imágenes optimizadas para garantizar tiempos de carga rápidos sin comprometer la calidad visual."
     />
     <Item
-      Icon={FiCheck}
-      title="Everything you need"
-      subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, dolorem."
+      Icon={IoNotificationsOutline}
+      title="Notificaciones Inteligentes"
+      subtitle="Como administrador recibe alertas personalizadas y notificaciones automáticas."
     />
   </div>
 );
