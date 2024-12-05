@@ -66,8 +66,8 @@ const Add = () => {
 
 
     emailjs
-    .sendForm('service_4opaas4', 'template_6q1ey0i', refForm.current, {
-      publicKey: 'sEq9Zuwfom1VxugjE',
+    .sendForm('service_lklpp9b', 'service_lklpp9b', refForm.current, {
+      publicKey: 'WVTSR8JDjaCcaq8Iq',
     })
     .then(
       () => {
